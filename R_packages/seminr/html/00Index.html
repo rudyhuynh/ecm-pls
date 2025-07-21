@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head><title>R: Building and Estimating Structural Equation Models</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+<h1> Building and Estimating Structural Equation Models
+<img class="toplogo" src="../../../doc/html/Rlogo.svg" alt="[R logo]" />
+</h1>
+<hr/>
+<div style="text-align: center;">
+<a href="../../../doc/html/packages.html"><img class="arrow" src="../../../doc/html/left.jpg" alt="[Up]" /></a>
+<a href="../../../doc/html/index.html"><img class="arrow" src="../../../doc/html/up.jpg" alt="[Top]" /></a>
+</div><h2>Documentation for package &lsquo;seminr&rsquo; version 2.3.4</h2>
+
+<ul><li><a href="../DESCRIPTION" type="text/plain; charset=utf-8">DESCRIPTION file</a>.</li>
+<li><a href="../doc/index.html">User guides, package vignettes and other documentation.</a></li>
+<li><a href="../demo">Code demos</a>.  Use <a href="../../utils/help/demo">demo()</a> to run them.</li>
+</ul>
+
+<h2>Help Pages</h2>
+
+
+<p style="text-align: center;">
+<a href="#A">A</a>
+<a href="#B">B</a>
+<a href="#C">C</a>
+<a href="#D">D</a>
+<a href="#E">E</a>
+<a href="#F">F</a>
+<a href="#G">G</a>
+<a href="#H">H</a>
+<a href="#I">I</a>
+<a href="#M">M</a>
+<a href="#N">N</a>
+<a href="#O">O</a>
+<a href="#P">P</a>
+<a href="#R">R</a>
+<a href="#S">S</a>
+<a href="#T">T</a>
+<a href="#U">U</a>
+</p>
+
+
+<h2><a id="A">-- A --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="as.reflective.html">as.reflective</a></td>
+<td>Converts all contructs of a measurement model, or just a single construct into reflective factors.</td></tr>
+<tr><td style="width: 25%;"><a href="as.reflective.construct.html">as.reflective.construct</a></td>
+<td>Converts a contruct of a measurement model into a reflective factor.</td></tr>
+<tr><td style="width: 25%;"><a href="as.reflective.interaction.html">as.reflective.interaction</a></td>
+<td>Converts interaction of a measurement model into a reflective factors.</td></tr>
+<tr><td style="width: 25%;"><a href="as.reflective.measurement_model.html">as.reflective.measurement_model</a></td>
+<td>Converts all contructs of a measurement model, or just a single construct into reflective factors.</td></tr>
+<tr><td style="width: 25%;"><a href="associations.html">associations</a></td>
+<td>Specifies inter-item covariances that should be supplied to CBSEM estimation ('estimate_cbsem') or CFA estimation ('estimate_cfa')</td></tr>
+</table>
+
+<h2><a id="B">-- B --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="bootstrap_model.html">bootstrap_model</a></td>
+<td>seminr bootstrap_model Function</td></tr>
+<tr><td style="width: 25%;"><a href="boot_paths_df.html">boot_paths_df</a></td>
+<td>Return all path bootstraps as a long dataframe. Columns of the dataframes are specified paths and rows are the estimated coefficients for the paths at each bootstrap iteration.</td></tr>
+<tr><td style="width: 25%;"><a href="browse_plot.html">browse_plot</a></td>
+<td>Open Edotor graphViz Website with the preloaded in the Browser</td></tr>
+</table>
+
+<h2><a id="C">-- C --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="check_test_plot.html">check_test_plot</a></td>
+<td>A function to create regression plots (maybe not needed?)</td></tr>
+<tr><td style="width: 25%;"><a href="composite.html">composite</a></td>
+<td>Composite construct measurement model specification</td></tr>
+<tr><td style="width: 25%;"><a href="compute_itcriteria_weights.html">compute_itcriteria_weights</a></td>
+<td>Function to calculate Akaike weights for IT Criteria</td></tr>
+<tr><td style="width: 25%;"><a href="constructs.html">constructs</a></td>
+<td>Measurement functions</td></tr>
+<tr><td style="width: 25%;"><a href="corp_rep_data.html">corp_rep_data</a></td>
+<td>Measurement Instrument for the Corporate Reputation Model</td></tr>
+<tr><td style="width: 25%;"><a href="corp_rep_data2.html">corp_rep_data2</a></td>
+<td>A Second Measurement Instrument for the Corporate Reputation Model</td></tr>
+<tr><td style="width: 25%;"><a href="mode_A.html">correlation_weights</a></td>
+<td>Outer weighting scheme functions to estimate construct weighting.</td></tr>
+<tr><td style="width: 25%;"><a href="cor_rsq.html">cor_rsq</a></td>
+<td>Returns R-sq of a dv given correlation matrix of ivs, dv cors &lt;- cbsem_summary$descriptives$correlations$constructs cor_rsq(cors, dv_name = "Value", iv_names = c("Image", "Quality"))</td></tr>
+<tr><td style="width: 25%;"><a href="csem2seminr.html">csem2seminr</a></td>
+<td>seminr csem2seminr() function</td></tr>
+</table>
+
+<h2><a id="D">-- D --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="df_xtab_matrix.html">df_xtab_matrix</a></td>
+<td>Cross-tabulates columns of a dataframe into a matrix with NAs for unspecified pairs</td></tr>
+<tr><td style="width: 25%;"><a href="dot_component_mm.html">dot_component_mm</a></td>
+<td>Generates the dot code for the measurement model</td></tr>
+<tr><td style="width: 25%;"><a href="dot_graph.html">dot_graph</a></td>
+<td>Generate a dot graph from various SEMinR models</td></tr>
+<tr><td style="width: 25%;"><a href="dot_graph.html">dot_graph.boot_seminr_model</a></td>
+<td>Generate a dot graph from various SEMinR models</td></tr>
+<tr><td style="width: 25%;"><a href="dot_graph.html">dot_graph.cbsem_model</a></td>
+<td>Generate a dot graph from various SEMinR models</td></tr>
+<tr><td style="width: 25%;"><a href="dot_graph.html">dot_graph.cfa_model</a></td>
+<td>Generate a dot graph from various SEMinR models</td></tr>
+<tr><td style="width: 25%;"><a href="dot_graph.html">dot_graph.measurement_model</a></td>
+<td>Generate a dot graph from various SEMinR models</td></tr>
+<tr><td style="width: 25%;"><a href="dot_graph.html">dot_graph.pls_model</a></td>
+<td>Generate a dot graph from various SEMinR models</td></tr>
+<tr><td style="width: 25%;"><a href="dot_graph.html">dot_graph.specified_model</a></td>
+<td>Generate a dot graph from various SEMinR models</td></tr>
+<tr><td style="width: 25%;"><a href="dot_graph.html">dot_graph.structural_model</a></td>
+<td>Generate a dot graph from various SEMinR models</td></tr>
+<tr><td style="width: 25%;"><a href="dot_graph_htmt.html">dot_graph_htmt</a></td>
+<td>Creates a dot string with a network graph of constructs based on HTMT measures</td></tr>
+<tr><td style="width: 25%;"><a href="dot_subcomponent_mm.html">dot_subcomponent_mm</a></td>
+<td>generates the dot code for a subgraph (per construct)</td></tr>
+</table>
+
+<h2><a id="E">-- E --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="edge_template_default.html">edge_template_default</a></td>
+<td>The default template for labeling bootstrapped edges</td></tr>
+<tr><td style="width: 25%;"><a href="edge_template_minimal.html">edge_template_minimal</a></td>
+<td>A minimal template for labeling bootstrapped edges that only shows the bootstrapped mean value</td></tr>
+<tr><td style="width: 25%;"><a href="esc_node.html">esc_node</a></td>
+<td>Wrap a text in single quotes</td></tr>
+<tr><td style="width: 25%;"><a href="estimate_cbsem.html">estimate_cbsem</a></td>
+<td>seminr estimate_cbsem() function</td></tr>
+<tr><td style="width: 25%;"><a href="estimate_cfa.html">estimate_cfa</a></td>
+<td>seminr estimate_cfa() function</td></tr>
+<tr><td style="width: 25%;"><a href="estimate_lavaan_ten_berge.html">estimate_lavaan_ten_berge</a></td>
+<td>seminr estimate_lavaan_ten_berge() function</td></tr>
+<tr><td style="width: 25%;"><a href="estimate_pls.html">estimate_pls</a></td>
+<td>seminr estimate_pls() function</td></tr>
+<tr><td style="width: 25%;"><a href="estimate_pls_mga.html">estimate_pls_mga</a></td>
+<td>Performs PLS-MGA to report significance of path differences between two subgroups of data</td></tr>
+<tr><td style="width: 25%;"><a href="extract_bootstrapped_values.html">extract_bootstrapped_values</a></td>
+<td>extract bootstrapped statistics from an edge using a row_index</td></tr>
+<tr><td style="width: 25%;"><a href="extract_htmt_nodes.html">extract_htmt_nodes</a></td>
+<td>Helper function that applies formatting to each construct</td></tr>
+<tr><td style="width: 25%;"><a href="extract_mm_coding.html">extract_mm_coding</a></td>
+<td>extracts the constructs and their types from the model</td></tr>
+<tr><td style="width: 25%;"><a href="extract_mm_edges.html">extract_mm_edges</a></td>
+<td>extract mm edges from model for a given index of all constructs</td></tr>
+<tr><td style="width: 25%;"><a href="extract_mm_edge_value.html">extract_mm_edge_value</a></td>
+<td>gets the mm_edge value (loading, weight) for bootstrapped and regular models</td></tr>
+<tr><td style="width: 25%;"><a href="extract_mm_nodes.html">extract_mm_nodes</a></td>
+<td>gets the individual nodes and applies formatting</td></tr>
+<tr><td style="width: 25%;"><a href="extract_sm_nodes.html">extract_sm_nodes</a></td>
+<td>Helper function that applies formatting to each construct</td></tr>
+</table>
+
+<h2><a id="F">-- F --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="format_endo_node_label.html">format_endo_node_label</a></td>
+<td>Helps to render a node label for endogenous variables</td></tr>
+<tr><td style="width: 25%;"><a href="format_exo_node_label.html">format_exo_node_label</a></td>
+<td>Helps to render a node label for exogenous variables</td></tr>
+<tr><td style="width: 25%;"><a href="fSquared.html">fSquared</a></td>
+<td>seminr fSquared Function</td></tr>
+</table>
+
+<h2><a id="G">-- G --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="get_construct_element_size.html">get_construct_element_size</a></td>
+<td>Gets the optimal size for construct elements in the plot</td></tr>
+<tr><td style="width: 25%;"><a href="get_construct_type.html">get_construct_type</a></td>
+<td>Returns the type of a construct from a model</td></tr>
+<tr><td style="width: 25%;"><a href="get_manifest_element_size.html">get_manifest_element_size</a></td>
+<td>Gets the optimal size for manifest elements in the plot</td></tr>
+<tr><td style="width: 25%;"><a href="get_mm_edge_style.html">get_mm_edge_style</a></td>
+<td>individual styles for measurement model edges</td></tr>
+<tr><td style="width: 25%;"><a href="get_mm_node_shape.html">get_mm_node_shape</a></td>
+<td>Get a string to insert into a node specification using the themed shape</td></tr>
+<tr><td style="width: 25%;"><a href="get_mm_node_style.html">get_mm_node_style</a></td>
+<td>get global measurement model node style</td></tr>
+<tr><td style="width: 25%;"><a href="get_sm_node_shape.html">get_sm_node_shape</a></td>
+<td>Get a string to insert into a node specification using the themed shape</td></tr>
+<tr><td style="width: 25%;"><a href="get_value_dependent_mm_edge_style.html">get_value_dependent_mm_edge_style</a></td>
+<td>Formats the style of the structural model edges</td></tr>
+<tr><td style="width: 25%;"><a href="get_value_dependent_sm_edge_style.html">get_value_dependent_sm_edge_style</a></td>
+<td>Formats the style of the structural model edges</td></tr>
+</table>
+
+<h2><a id="H">-- H --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="higher_composite.html">higher_composite</a></td>
+<td>higher_composite</td></tr>
+<tr><td style="width: 25%;"><a href="higher_reflective.html">higher_reflective</a></td>
+<td>higher_reflective</td></tr>
+</table>
+
+<h2><a id="I">-- I --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="influencer_data.html">influencer_data</a></td>
+<td>Measurement Instrument for the Influencer Model</td></tr>
+<tr><td style="width: 25%;"><a href="interaction_term.html">interaction_term</a></td>
+<td>Interaction function</td></tr>
+<tr><td style="width: 25%;"><a href="is_sink.html">is_sink</a></td>
+<td>Tests whether the i_th construct is endogenous or not</td></tr>
+<tr><td style="width: 25%;"><a href="item_errors.html">item_errors</a></td>
+<td>Specifies pair of items, or sets of items, that should covary. Used to specify error covariances for 'associations'.</td></tr>
+</table>
+
+<h2><a id="M">-- M --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="mean_replacement.html">mean_replacement</a></td>
+<td>Function to clean data of omitted values by mean replacement</td></tr>
+<tr><td style="width: 25%;"><a href="mobi.html">mobi</a></td>
+<td>Measurement Instrument for the Mobile Phone Industry</td></tr>
+<tr><td style="width: 25%;"><a href="mode_A.html">mode_A</a></td>
+<td>Outer weighting scheme functions to estimate construct weighting.</td></tr>
+<tr><td style="width: 25%;"><a href="mode_A.html">mode_A,</a></td>
+<td>Outer weighting scheme functions to estimate construct weighting.</td></tr>
+<tr><td style="width: 25%;"><a href="mode_B.html">mode_B</a></td>
+<td>Outer weighting scheme functions to estimate construct weighting.</td></tr>
+<tr><td style="width: 25%;"><a href="mode_B.html">mode_B,</a></td>
+<td>Outer weighting scheme functions to estimate construct weighting.</td></tr>
+<tr><td style="width: 25%;"><a href="multi_items.html">multi_items</a></td>
+<td>Multi-items measurement model specification</td></tr>
+</table>
+
+<h2><a id="N">-- N --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="node_endo_template_default.html">node_endo_template_default</a></td>
+<td>The default template for labeling endogenous construct nodes</td></tr>
+<tr><td style="width: 25%;"><a href="node_exo_template_default.html">node_exo_template_default</a></td>
+<td>The default template for labeling exogenous construct nodes</td></tr>
+</table>
+
+<h2><a id="O">-- O --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="orthogonal.html">orthogonal</a></td>
+<td>'orthogonal' creates interaction measurement items by using the orthogonalized approach wherein</td></tr>
+</table>
+
+<h2><a id="P">-- P --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="relationships.html">paths</a></td>
+<td>Structural specification functions for seminr package</td></tr>
+<tr><td style="width: 25%;"><a href="path_factorial.html">path_factorial</a></td>
+<td>Inner weighting scheme functions to estimate inner paths matrix</td></tr>
+<tr><td style="width: 25%;"><a href="path_weighting.html">path_weighting</a></td>
+<td>Inner weighting scheme functions to estimate inner paths matrix</td></tr>
+<tr><td style="width: 25%;"><a href="plot.reliability_table.html">plot.reliability_table</a></td>
+<td>Function for plotting the measurement model reliability metrics of a PLS model</td></tr>
+<tr><td style="width: 25%;"><a href="plot.seminr_model.html">plot.seminr_model</a></td>
+<td>Plot various SEMinR models</td></tr>
+<tr><td style="width: 25%;"><a href="plot_htmt.html">plot_htmt</a></td>
+<td>Plots a network graph of constructs based on HTMT measures</td></tr>
+<tr><td style="width: 25%;"><a href="plot_interaction.html">plot_interaction</a></td>
+<td>Function for plotting interaction plot for moderated PLS or CBSEM model</td></tr>
+<tr><td style="width: 25%;"><a href="report_paths.html">plot_scores</a></td>
+<td>Functions for reporting the Path Coefficients and R2 of endogenous constructs and for generating a scatterplot matrix of construct scores.</td></tr>
+<tr><td style="width: 25%;"><a href="PLSc.html">PLSc</a></td>
+<td>seminr PLSc Function</td></tr>
+<tr><td style="width: 25%;"><a href="predict_DA.html">predict_DA</a></td>
+<td>Predictive Scheme</td></tr>
+<tr><td style="width: 25%;"><a href="predict_EA.html">predict_EA</a></td>
+<td>Predictive Scheme</td></tr>
+<tr><td style="width: 25%;"><a href="predict_pls.html">predict_pls</a></td>
+<td>Predict_pls performs either k-fold or LOOCV on a SEMinR PLS model and generates predictions</td></tr>
+<tr><td style="width: 25%;"><a href="print.seminr_pls_mga.html">print.seminr_pls_mga</a></td>
+<td>Summary function for PLS-MGA</td></tr>
+<tr><td style="width: 25%;"><a href="product_indicator.html">product_indicator</a></td>
+<td>'product_indicator' creates interaction measurement items by scaled product indicator approach.</td></tr>
+</table>
+
+<h2><a id="R">-- R --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="reflective.html">reflective</a></td>
+<td>Reflective construct measurement model specification</td></tr>
+<tr><td style="width: 25%;"><a href="mode_B.html">regression_weights</a></td>
+<td>Outer weighting scheme functions to estimate construct weighting.</td></tr>
+<tr><td style="width: 25%;"><a href="relationships.html">relationships</a></td>
+<td>Structural specification functions for seminr package</td></tr>
+<tr><td style="width: 25%;"><a href="report_paths.html">report_paths</a></td>
+<td>Functions for reporting the Path Coefficients and R2 of endogenous constructs and for generating a scatterplot matrix of construct scores.</td></tr>
+<tr><td style="width: 25%;"><a href="rerun.html">rerun</a></td>
+<td>Reruns a previously specified seminr model/analysis</td></tr>
+<tr><td style="width: 25%;"><a href="rerun.pls_model.html">rerun.pls_model</a></td>
+<td>Reruns a previously specified seminr PLS model</td></tr>
+<tr><td style="width: 25%;"><a href="rho_A.html">rho_A</a></td>
+<td>seminr rho_A Function</td></tr>
+</table>
+
+<h2><a id="S">-- S --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="save_plot.html">save_plot</a></td>
+<td>Saves a SEMinR model plot to file</td></tr>
+<tr><td style="width: 25%;"><a href="seminr_theme_create.html">seminr_theme_create</a></td>
+<td>Create a theme for a seminr graph visualization</td></tr>
+<tr><td style="width: 25%;"><a href="seminr_theme_dark.html">seminr_theme_dark</a></td>
+<td>The theme function for an inverted theme on black background.</td></tr>
+<tr><td style="width: 25%;"><a href="seminr_theme_default.html">seminr_theme_default</a></td>
+<td>A colored theme</td></tr>
+<tr><td style="width: 25%;"><a href="seminr_theme_get.html">seminr_theme_get</a></td>
+<td>Get and set the active theme</td></tr>
+<tr><td style="width: 25%;"><a href="seminr_theme_old.html">seminr_theme_old</a></td>
+<td>A theme function for a basic b/w theme</td></tr>
+<tr><td style="width: 25%;"><a href="seminr_theme_get.html">seminr_theme_set</a></td>
+<td>Get and set the active theme</td></tr>
+<tr><td style="width: 25%;"><a href="seminr_theme_default.html">seminr_theme_smart</a></td>
+<td>A colored theme</td></tr>
+<tr><td style="width: 25%;"><a href="simplePLS.html">simplePLS</a></td>
+<td>seminr simplePLS Function</td></tr>
+<tr><td style="width: 25%;"><a href="single_item.html">single_item</a></td>
+<td>Single-item measurement model specification</td></tr>
+<tr><td style="width: 25%;"><a href="slope_analysis.html">slope_analysis</a></td>
+<td>Function for plotting a slope analysis for an interaction in a PLS model</td></tr>
+<tr><td style="width: 25%;"><a href="specific_effect_significance.html">specific_effect_significance</a></td>
+<td>seminr specific effect significance function</td></tr>
+<tr><td style="width: 25%;"><a href="specify_model.html">specify_model</a></td>
+<td>seminr specify_model() function</td></tr>
+<tr><td style="width: 25%;"><a href="standardize_safely.html">standardize_safely</a></td>
+<td>Standardize (scale) a matrix/df and report interpretable errors</td></tr>
+</table>
+
+<h2><a id="T">-- T --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="total_indirect_ci.html">total_indirect_ci</a></td>
+<td>seminr total indirect confidence intervals function</td></tr>
+<tr><td style="width: 25%;"><a href="two_stage.html">two_stage</a></td>
+<td>Creates an interaction measurement item using a two-stage approach. The two-stage procedure for both PLS and CBSEM models estimates construct scores in the first stage, and uses them to produce a single-item product item for the interaction term in the second stage. For a PLS model, the first stage uses PLS to compute construct scores. For a CBSEM model, the first stage uses a CFA to produce ten Berge construct scores.</td></tr>
+</table>
+
+<h2><a id="U">-- U --</a></h2>
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="unit_weights.html">unit_weights</a></td>
+<td>Outer weighting scheme functions to estimate construct weighting.</td></tr>
+</table>
+</div></body></html>

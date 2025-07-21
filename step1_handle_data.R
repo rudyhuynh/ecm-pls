@@ -1,9 +1,15 @@
 options(repos = "https://cloud.r-project.org")
 
 local_lib <- "./R_packages"
-dir.create(local_lib, showWarnings = FALSE, recursive = TRUE)
+if (dir.exists(local_lib)) {
+    cat("Local library found at:", local_lib, "\n")
+} else {
+    cat("Local library not found. Create directory and install package...\n")
+    dir.create(local_lib, showWarnings = FALSE, recursive = TRUE)
 
-install.packages("dplyr", lib = local_lib)
+    install.packages("dplyr", lib = local_lib)
+}
+
 library(dplyr, lib.loc = local_lib)
 #----------------
 

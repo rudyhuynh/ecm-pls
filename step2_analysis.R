@@ -1,12 +1,18 @@
 options(repos = "https://cloud.r-project.org")
 
 local_lib <- "./R_packages"
-dir.create(local_lib, showWarnings = FALSE, recursive = TRUE)
+if (dir.exists(local_lib)) {
+    cat("Local library found at:", local_lib, "\n")
+} else {
+    cat("Local library not found. Create directory and install package...\n")
+    dir.create(local_lib, showWarnings = FALSE, recursive = TRUE)
 
-# Install packages
-install.packages("ggplot2", lib = local_lib)
-install.packages("dplyr", lib = local_lib)
-install.packages("seminr", lib = local_lib)
+    # Install packages
+    install.packages("ggplot2", lib = local_lib)
+    install.packages("dplyr", lib = local_lib)
+    install.packages("seminr", lib = local_lib)
+}
+
 
 # Load packages
 library(ggplot2, lib.loc = local_lib)
@@ -15,9 +21,11 @@ library(seminr, lib.loc = local_lib)
 
 data <- read.csv("./output/data.csv")
 
+set.seed(2025)
+
 measurement_model <- constructs(
     composite("PU", multi_items("PU", 1:5)),
-    composite("PEOU", multi_items("PEOU", 1:4)),
+    composite("PEOU", multi_items("PEOU", c(1,2,4))),
     composite("HAB", multi_items("HAB", 1:3)),
     composite("S", multi_items("S", 1:2)),
     composite("C", multi_items("C", 1:3)),
@@ -60,8 +68,7 @@ write.table(path_matrix, sep="\t", quote=FALSE, na="")
 
 bs_model <- bootstrap_model(seminr_model = model,
     nboot = 10000,
-    cores = NULL,
-    seed = 123)
+    cores = NULL)
 
 # Store the summary of the bootstrapped model
 bs_model_summary <- summary(bs_model)
