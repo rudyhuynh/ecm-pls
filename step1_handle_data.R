@@ -54,11 +54,11 @@ data[] <- lapply(data, function(x) {
 # Column Mapping
 new_column_names <- c(
   "timestamp",   #A Timestamp
-  "age",   #B Age
-  "job",   #C Occupation
-  "is_learning_new_language",   #D Learning new language
-  "has_using_flashcard_app",   #E Using flashcard app
-  "learning_topics",   #F Learning topics
+  "age",   #B Tuoi cua ban
+  "job",   #C Nghe nghiep hien tai
+  "is_learning_new_language",   #D Ban co dang hoc ngon ngu moi khong?
+  "has_using_flashcard_app",   #E Ban co dang su dung app hoc tu vung Flashcard de ho tro viec hoc khong?
+  "learning_topics",   #F Ban su dung app de hoc ve nhung de tai nao sau day...
   "apps_used",   #G Apps used
   "PU1",   #H Benefit 1 - Save time
   "PU2",   #I Benefit 2 - Remember longer
