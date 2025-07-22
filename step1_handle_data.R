@@ -13,8 +13,8 @@ if (dir.exists(local_lib)) {
 library(dplyr, lib.loc = local_lib)
 #----------------
 
-INPUT = "Bang_Khao_Sat_Import_Google_Form - Form Responses 1(4).csv"
-OUTPUT = "./output/data.csv"
+INPUT = "Bang_Khao_Sat_Import_Google_Form - Form Responses 1.csv"
+OUTPUT = "data.csv"
 
 data <- read.csv(INPUT)
 
@@ -195,7 +195,7 @@ cat("Data rows after filtering:", nrow(data), "\n")
 
 # Remove unnecessary columns
 selected_columns <- c(
-  "timestamp", "email",
+  "timestamp",
   "HAB1", "HAB2", "HAB3", 
   "PU1", "PU2", "PU3", "PU4", "PU5", 
   "SAT1", "SAT2",

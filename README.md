@@ -7,9 +7,9 @@
 
 ## Các bước phân tích
 
-- Copy file data `Bang_Khao_Sat_Import_Google_Form - Form Responses 1.csv` vào cùng thư mục chứa file `README.md` này.
-- Chạy lệnh `Rscript step1_handle_data.R` để xử lý, làm sạch dữ liệu --> output: `output/data.csv`
-- Chạy lệnh `Rscript step2_analysis.R` để chạy mô hình PLS-SEM cho `output/data.csv`
+- Copy file data `Bang_Khao_Sat_Import_Google_Form - Form Responses 1.csv` tải về từ Google Form vào cùng thư mục chứa file `README.md` này.
+- Chạy lệnh `Rscript step1_handle_data.R` để xử lý, làm sạch dữ liệu từ Google Form --> output: `data.csv`
+- Chạy lệnh `Rscript step2_analysis.R` để chạy mô hình PLS-SEM cho `data.csv`
 
 ## Reference
 

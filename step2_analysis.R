@@ -19,7 +19,7 @@ library(ggplot2, lib.loc = local_lib)
 library(dplyr, lib.loc = local_lib)
 library(seminr, lib.loc = local_lib)
 
-data <- read.csv("./output/data.csv")
+data <- read.csv("data.csv")
 
 set.seed(2025)
 
