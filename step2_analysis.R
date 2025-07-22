@@ -27,21 +27,21 @@ measurement_model <- constructs(
     composite("PU", multi_items("PU", 1:5)),
     composite("PEOU", multi_items("PEOU", c(1,2,4))),
     composite("HAB", multi_items("HAB", 1:3)),
-    composite("S", multi_items("S", 1:2)),
-    composite("C", multi_items("C", 1:3)),
+    composite("SAT", multi_items("SAT", 1:2)),
+    composite("CONF", multi_items("CONF", 1:3)),
     composite("PI", multi_items("PI", 1:2))
 )
 structural_model <- relationships(
     paths(from = "HAB", to = "PI"),
     paths(from = "PU", to = "PI"),
     paths(from = "PEOU", to = "PI"),
-    paths(from = "S", to = "PI"),
-    paths(from = "PU", to = "S"),
-    paths(from = "PEOU", to = "S"),
-    paths(from = "C", to = "S"),
+    paths(from = "SAT", to = "PI"),
+    paths(from = "PU", to = "SAT"),
+    paths(from = "PEOU", to = "SAT"),
+    paths(from = "CONF", to = "SAT"),
     paths(from = "PEOU", to = "PU"),
-    paths(from = "C", to = "PU"),
-    paths(from = "C", to = "PEOU")
+    paths(from = "CONF", to = "PU"),
+    paths(from = "CONF", to = "PEOU")
 )
 
 model <- estimate_pls(data = data,

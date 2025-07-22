@@ -91,13 +91,13 @@ new_column_names <- c(
   "FI12",  #AJ Bạn quan tâm đến những tính năng nào sau đây...? Giúp tạo ra lộ trình học phù hợp với kiến thức của tôi
   "PEOU_OTHER",  #AK Other feedback
   "monthly_price_exp",  # Premium price expectation
-  "S1",  #AM Overall satisfaction
-  "S2",  #AN Feature satisfaction
+  "SAT1",  #AM Overall satisfaction
+  "SAT2",  #AN Feature satisfaction
   "c41",  #AO Expectation 1
-  "C1",  #AP Trải nghiệm thực tế của tôi với ứng dụng học từ vựng tốt hơn so với kỳ vọng ban đầu.
+  "CONF1",  #AP Trải nghiệm thực tế của tôi với ứng dụng học từ vựng tốt hơn so với kỳ vọng ban đầu.
   "c43",  #AQ Expectation 3
-  "C2",  #AR Các chức năng mà ứng dụng cung cấp vượt hơn mong đợi của tôi.
-  "C3",  #AS Nhìn chung, ứng dụng học từ vựng đã đáp ứng hầu hết kỳ vọng ban đầu của tôi.
+  "CONF2",  #AR Các chức năng mà ứng dụng cung cấp vượt hơn mong đợi của tôi.
+  "CONF3",  #AS Nhìn chung, ứng dụng học từ vựng đã đáp ứng hầu hết kỳ vọng ban đầu của tôi.
   "improve_need1",  #AT Improvement need 1
   "improve_need2",  #AU Improvement need 2
   "improve_need3",  #AV Improvement need 3
@@ -165,6 +165,21 @@ cat("Data rows before filtering:", nrow(data), "\n")
 data <- data %>%
   filter(is_learning_new_language == "Co" & has_using_flashcard_app == "Co")
 cat("Data rows after filtering:", nrow(data), "\n")
+
+# Remove unnecessary columns
+selected_columns <- c(
+  "timestamp", "email",
+  "HAB1", "HAB2", "HAB3", 
+  "PU1", "PU2", "PU3", "PU4", "PU5", 
+  "SAT1", "SAT2",
+  "PEOU1", "PEOU2", "PEOU3", "PEOU4", 
+  "CONF1", "CONF2", "CONF3", 
+  "PI1", "PI2")
+
+# Keep only columns that exist in the data
+existing_columns <- intersect(selected_columns, colnames(data))
+data <- data[, existing_columns]
+#------
 
 write.csv(data, OUTPUT)
 cat("Data saved to", OUTPUT, "\n")
