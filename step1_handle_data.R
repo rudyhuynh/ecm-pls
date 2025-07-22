@@ -162,6 +162,8 @@ data$PEOU3 <- case_when(
 
 # Filter data row
 cat("Data rows before filtering:", nrow(data), "\n")
+
+# Exclude due to one-type responders and self testing data
 excluded_timestamp <- c(
   "6/23/2025 23:10:46",
   "6/26/2025 2:57:55",
@@ -176,10 +178,19 @@ excluded_timestamp <- c(
   "7/16/2025 10:25:26"
 )
 
+# Included due to face-to-face feedback and/or provide valuable insights
+included_timestamp <- c(
+  "6/26/2025 11:09:07",
+  "6/27/2025 2:43:41",
+  "7/9/2025 5:26:45",
+  "7/9/2025 10:31:35",
+  "7/17/2025 3:05:23"
+)
+
 data <- data %>%
   filter(!timestamp %in% excluded_timestamp)
 data <- data %>%
-  filter(is_learning_new_language == "Co" & has_using_flashcard_app == "Co")
+  filter((is_learning_new_language == "Co" & has_using_flashcard_app == "Co") | timestamp %in% included_timestamp)
 cat("Data rows after filtering:", nrow(data), "\n")
 
 # Remove unnecessary columns
