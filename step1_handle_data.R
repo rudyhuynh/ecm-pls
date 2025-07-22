@@ -90,7 +90,7 @@ new_column_names <- c(
   "app_refer",  #AI How discovered app
   "FI12",  #AJ Bạn quan tâm đến những tính năng nào sau đây...? Giúp tạo ra lộ trình học phù hợp với kiến thức của tôi
   "PEOU_OTHER",  #AK Other feedback
-  "monthly_price_exp",  # Premium price expectation
+  "monthly_price_exp",  #AL Theo bạn, mức phí mà bạn cho là hợp lý để sử dụng gói premium mỗi tháng là bao nhiêu? (VND)
   "SAT1",  #AM Overall satisfaction
   "SAT2",  #AN Feature satisfaction
   "c41",  #AO Expectation 1

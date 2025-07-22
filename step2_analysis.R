@@ -32,16 +32,16 @@ measurement_model <- constructs(
     composite("PI", multi_items("PI", 1:2))
 )
 structural_model <- relationships(
-    paths(from = "HAB", to = "PI"),
-    paths(from = "PU", to = "PI"),
-    paths(from = "PEOU", to = "PI"),
-    paths(from = "SAT", to = "PI"),
-    paths(from = "PU", to = "SAT"),
-    paths(from = "PEOU", to = "SAT"),
-    paths(from = "CONF", to = "SAT"),
-    paths(from = "PEOU", to = "PU"),
-    paths(from = "CONF", to = "PU"),
-    paths(from = "CONF", to = "PEOU")
+    paths(from = "PU", to = "PI"), # H1
+    paths(from = "PEOU", to = "PI"), # H2
+    paths(from = "SAT", to = "PI"), # H3
+    paths(from = "HAB", to = "PI"), # H4
+    paths(from = "PU", to = "SAT"), # H5
+    paths(from = "PEOU", to = "SAT"), # H6
+    paths(from = "CONF", to = "SAT"), # H7
+    paths(from = "PEOU", to = "PU"), # H8
+    paths(from = "CONF", to = "PU"), # H9
+    paths(from = "CONF", to = "PEOU") # H10
 )
 
 model <- estimate_pls(data = data,
@@ -53,13 +53,21 @@ model <- estimate_pls(data = data,
 
 # Summarize the model results
 summ <- summary(model)
-
-# Inspect the model’s path coefficients and the R^2 values
 path_matrix <- summ$paths
+
+print("Indicator loadings (>0.4 , >0.708):")
+write.table(summ$loadings, sep="\t", quote=FALSE, na="_")
+
+print("Indicator reliability:")
+write.table(summ$loadings^2, sep="\t", quote=FALSE, na="_")
 
 # Inspect the construct reliability metrics
 # summ$reliability
-write.table(summ$reliability, sep="\t", quote=FALSE, na="")
+print("$reliability (alpha>0.7, AVE>0.5):")
+write.table(summ$reliability, sep="\t", quote=FALSE, na="_")
+
+print("HTMT (<0.85):")
+write.table(summ$validity$htmt, sep="\t", quote=FALSE, na="_")
 
 # Print the results to console first to verify
 print("Path Coefficients:")
