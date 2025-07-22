@@ -162,6 +162,22 @@ data$PEOU3 <- case_when(
 
 # Filter data row
 cat("Data rows before filtering:", nrow(data), "\n")
+excluded_timestamp <- c(
+  "6/23/2025 23:10:46",
+  "6/26/2025 2:57:55",
+  "7/9/2025 6:30:51",
+  "6/26/2025 23:22:15",
+  "7/16/2025 21:51:00",
+  "7/16/2025 9:10:49",
+  "7/16/2025 9:31:52",
+  "7/9/2025 7:34:46",
+  "7/9/2025 5:42:28",
+  "7/9/2025 7:37:29",
+  "7/16/2025 10:25:26"
+)
+
+data <- data %>%
+  filter(!timestamp %in% excluded_timestamp)
 data <- data %>%
   filter(is_learning_new_language == "Co" & has_using_flashcard_app == "Co")
 cat("Data rows after filtering:", nrow(data), "\n")
