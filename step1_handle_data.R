@@ -13,7 +13,7 @@ if (dir.exists(local_lib)) {
 library(dplyr, lib.loc = local_lib)
 #----------------
 
-INPUT = "Bang_Khao_Sat_Import_Google_Form - Form Responses 1(1).csv"
+INPUT = "Bang_Khao_Sat_Import_Google_Form - Form Responses 1(4).csv"
 OUTPUT = "./output/data.csv"
 
 data <- read.csv(INPUT)
