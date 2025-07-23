@@ -10,8 +10,8 @@
 ## Các bước thực thi
 
 - Copy file data `Bang_Khao_Sat_Import_Google_Form - Form Responses 1.csv` tải về từ Google Form vào cùng thư mục chứa file `README.md` này.
-- Chạy lệnh `Rscript src/handle_data.R` để xử lý và làm sạch dữ liệu từ Google Form --> output: `data.csv`
-- Import `data.csv` và `src/studio.R` vào RStudio IDE.
+- Chạy lệnh `Rscript handle_data.R` để xử lý và làm sạch dữ liệu từ Google Form --> output: `data.csv`
+- Import `data.csv` và `studio.R` vào RStudio IDE.
 - Chạy các lệnh cần thiết trong `studio.R` bằng RStudio IDE để phân tích mô hình và plot model.
 
 ## Reference

@@ -1,6 +1,6 @@
 options(repos = "https://cloud.r-project.org")
 
-local_lib <- "./R_packages"
+local_lib <- "R_packages"
 dir.create(local_lib, showWarnings = FALSE, recursive = TRUE)
 
 install.packages("dplyr", lib = local_lib)
@@ -174,7 +174,7 @@ excluded_timestamp <- c(
   "7/16/2025 10:25:26"
 )
 
-# Included due to face-to-face feedback and/or provide valuable insights
+# Included due to direct feedback and/or provide valuable insights
 included_timestamp <- c(
   "6/26/2025 11:09:07",
   "6/27/2025 2:43:41",

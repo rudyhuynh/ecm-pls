@@ -37,6 +37,7 @@ model <- estimate_pls(data = data,
 summ <- summary(model)
 
 bs_model <- bootstrap_model(seminr_model = model, nboot = 10000, cores = NULL)
+summary_boot <- summary(bs_model)
 
 # Dùng để kiểm tra mô hình đo lường:
 summ$loadings
@@ -47,8 +48,10 @@ summ$validity$htmt
 summ$vif_antecedents
 summary_boot$bootstrapped_paths
 summary_boot$bootstrapped_total_paths
+summ$paths
+summ$fSquare
 
 # Plot the models:
-plot(measurement_model)
-plot(structural_model)
+#plot(measurement_model)
+#plot(structural_model)
 plot(bs_model, title = "PLS Model")
