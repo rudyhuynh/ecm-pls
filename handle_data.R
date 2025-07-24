@@ -10,7 +10,6 @@ library(dplyr, lib.loc = local_lib)
 #----------------
 
 INPUT = "Bang_Khao_Sat_Import_Google_Form - Form Responses 1.csv"
-OUTPUT = "data.csv"
 
 data <- read.csv(INPUT)
 
@@ -34,6 +33,7 @@ convert_vietnamese_to_ascii <- function(text) {
   text <- gsub("Ỳ|Ý|Ỵ|Ỷ|Ỹ", "Y", text)
   text <- gsub("đ", "d", text)
   text <- gsub("Đ", "D", text)
+  text <- gsub("\n|\r\n|\r", ";", text)
   
   return(text)
 }
@@ -189,6 +189,10 @@ data <- data %>%
   filter((is_learning_new_language == "Co" & has_using_flashcard_app == "Co") | timestamp %in% included_timestamp)
 cat("Data rows after filtering:", nrow(data), "\n")
 
+write.csv(data, "data-descriptive.csv")
+cat("Data saved:\n")
+cat("  data-descriptive.csv:", nrow(data), "rows,", ncol(data), "columns\n")
+
 # Remove unnecessary columns
 selected_columns <- c(
   "timestamp",
@@ -202,8 +206,6 @@ selected_columns <- c(
 # Keep only columns that exist in the data
 existing_columns <- intersect(selected_columns, colnames(data))
 data <- data[, existing_columns]
-#------
 
-write.csv(data, OUTPUT)
-cat("Data saved to", OUTPUT, "\n")
-cat("\twith ", nrow(data), "rows and", ncol(data), "columns\n")
+write.csv(data, "data-plssem.csv")
+cat("  data-plssem.csv:", nrow(data), "rows,", ncol(data), "columns\n")

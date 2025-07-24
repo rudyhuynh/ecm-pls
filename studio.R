@@ -54,4 +54,4 @@ summ$fSquare
 # Plot the models:
 #plot(measurement_model)
 #plot(structural_model)
-plot(bs_model, title = "PLS Model")
+#plot(bs_model, title = "PLS Model")
